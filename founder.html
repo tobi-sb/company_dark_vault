@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil du Fondateur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Profil du Fondateur</h1>
+            <a href="index.html" class="back-btn">Retour aux Entreprises</a>
+        </div>
+
+        <div class="founder-profile" id="founderProfile">
+            <div class="founder-header">
+                <h2 id="founderName"></h2>
+                <div class="founder-dates" id="founderDates"></div>
+                <div class="founder-birthplace" id="founderBirthplace"></div>
+            </div>
+
+            <div class="founder-section">
+                <h3>Aperçu Rapide</h3>
+                <div class="founder-quick-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Style d'Innovation</span>
+                        <span class="stat-value" id="innovationStyle"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Style de Leadership</span>
+                        <span class="stat-value" id="leadershipStyle"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Philosophie</span>
+                        <span class="stat-value" id="philosophy"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="founder-section">
+                <h3>Formation & Parcours</h3>
+                <div id="educationList"></div>
+            </div>
+
+            <div class="founder-section">
+                <h3>Entreprises & Projets</h3>
+                <div id="companiesList" class="companies-timeline"></div>
+            </div>
+
+            <div class="founder-section">
+                <h3>Réalisations Majeures</h3>
+                <div id="achievementsList" class="achievements-grid"></div>
+            </div>
+
+            <div class="founder-section">
+                <h3>Parcours de Leadership</h3>
+                <div class="leadership-content">
+                    <div class="subsection">
+                        <h4>Approche d'Innovation</h4>
+                        <p id="innovationDetails"></p>
+                    </div>
+                    <div class="subsection">
+                        <h4>Impact du Leadership</h4>
+                        <p id="leadershipDetails"></p>
+                    </div>
+                    <div class="subsection">
+                        <h4>Philosophie Personnelle</h4>
+                        <p id="philosophyDetails"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="founder-section">
+                <h3>Héritage & Impact</h3>
+                <div id="biography" class="biography-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="founder.js"></script>
+</body>
+</html> 

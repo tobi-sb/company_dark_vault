@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Analysis Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Company Analysis Dashboard</h1>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search companies...">
+            <button class="btn" id="filterBtn">Filters</button>
+            <button class="btn" id="viewToggle">Table View</button>
+            <button class="btn" id="languageToggle">🇬🇧 EN</button>
+            <button class="btn" id="favoritesBtn">⭐ Favoris</button>
+        </div>
+
+        <div class="companies-grid" id="companiesGrid"></div>
+    </div>
+
+    <div class="detail-view" id="detailView">
+        <div class="detail-content">
+            <span class="close-btn">&times;</span>
+            <div id="detailContent"></div>
+        </div>
+    </div>
+
+    <div id="favoritesModal" class="favorites-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeFavorites">&times;</span>
+            <h2>Mes Favoris</h2>
+            <div class="favorites-sections">
+                <div class="favorites-section">
+                    <h3>Tactiques Clés</h3>
+                    <div id="favoriteTactics" class="favorites-list"></div>
+                </div>
+                <div class="favorites-section">
+                    <h3>Pratiques Controversées</h3>
+                    <div id="favoritePractices" class="favorites-list"></div>
+                </div>
+                <div class="favorites-section">
+                    <h3>Tactiques Psychologiques</h3>
+                    <div id="favoritePsychological" class="favorites-list"></div>
+                </div>
+                <div class="favorites-section">
+                    <h3>Tactiques de Fidélisation</h3>
+                    <div id="favoriteLoyalty" class="favorites-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-modal" id="filterModal">
+        <div class="filter-content">
+            <span class="close-btn" id="closeFilter">&times;</span>
+            <h2>Filtres</h2>
+            <div class="filter-section">
+                <h3>Année de création</h3>
+                <div class="range-filter">
+                    <input type="number" id="yearMin" placeholder="Année min">
+                    <span>à</span>
+                    <input type="number" id="yearMax" placeholder="Année max">
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Catégories</h3>
+                <div class="category-filter" id="sectorFilter">
+                    <!-- Sera rempli dynamiquement -->
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Capital Initial</h3>
+                <select id="capitalFilter">
+                    <option value="">Tous</option>
+                    <option value="low">Faible (< 10k€)</option>
+                    <option value="medium">Moyen (10k€ - 100k€)</option>
+                    <option value="high">Élevé (> 100k€)</option>
+                </select>
+            </div>
+            <div class="filter-section">
+                <h3>Taille de l'équipe initiale</h3>
+                <select id="teamSizeFilter">
+                    <option value="">Tous</option>
+                    <option value="solo">Solo (1 personne)</option>
+                    <option value="small">Petite (2-5)</option>
+                    <option value="medium">Moyenne (6-10)</option>
+                    <option value="large">Grande (10+)</option>
+                </select>
+            </div>
+            <div class="filter-buttons">
+                <button class="btn" id="applyFilters">Appliquer</button>
+                <button class="btn secondary" id="resetFilters">Réinitialiser</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html> 
